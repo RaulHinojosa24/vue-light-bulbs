@@ -1,5 +1,6 @@
 <script setup>
 import LightBulb from './components/LightBulb.vue';
+import logo from './assets/logo.svg'
 </script>
 
 <script>
@@ -30,6 +31,8 @@ import LightBulb from './components/LightBulb.vue';
 
 <template>
   <main>
+    <img :src="logo" alt="Logo" id="logo">
+
     <div>
       <h1 v-if="allOn">Todas las bombillas están encendidas!</h1>
       <h1 v-else>Faltan bombillas por encender!</h1>
@@ -51,9 +54,15 @@ import LightBulb from './components/LightBulb.vue';
   font-weight: normal;
 }
 
+#logo {
+  width: 200px;
+}
+
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bulbs {
